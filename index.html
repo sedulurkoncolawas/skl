@@ -222,39 +222,42 @@
     }
   });
     
-let isValidAnswer = false;
+    async function fetchNews() {
+    try {
+      const apiKey = '38292e34b0a649c1aed40e2f24733439';
+      const apiUrl = `https://newsapi.org/v2/top-headlines?country=id&apiKey=${apiKey}`;
 
-  while (!isValidAnswer) {
-    const answer = prompt('Apakah Ardan ganteng? Ketik Ganteng untuk lanjut!');
+      const response = await fetch(apiUrl);
+      const data = await response.json();
 
-    if (answer && isGantengAnswer(answer.toLowerCase())) {
-      alert('Mantap! Gw emang ganteng awokawok 😎');
-      isValidAnswer = true;
-    } else {
-      alert('Mampus lu gabisa kan makanya ketik Ganteng 😜');
+      // Ambil judul berita pertama
+      const newsTitle = data.articles[0].title;
+
+      // Tampilkan pesan dengan judul berita
+      showMessageBasedOnNews(newsTitle);
+    } catch (error) {
+      console.error('Error fetching news:', error);
     }
   }
 
-  function isGantengAnswer(userAnswer) {
-    const gantengKeywords = ['ganteng', 'mantap', 'keren', 'cakep'];
-    const negativeKeywords = ['tidak', 'gk', 'no', 'ora', 'ra', 'gak', 'kaga', 'ngga', 'nggak', 'engga', 'enggak']; // Kata-kata negatif
-    
-    // Memeriksa apakah jawaban mengandung kata negatif
-    for (const negKeyword of negativeKeywords) {
-      if (userAnswer.includes(negKeyword)) {
-        return false; // Jawaban negatif, tidak valid
-      }
-    }
+  function showMessageBasedOnNews(newsTitle) {
+    const randomMessages = [
+      `Berita viral hari ini: ${newsTitle}! 😎`,
+      `Wah, kamu tahu nggak? ${newsTitle} itu lagi ngehits! 👍`,
+      `Bener banget! ${newsTitle} emang sedang jadi perbincangan hangat! 🌟`,
+      `Selamat! Kamu sudah tahu tentang ${newsTitle}! 🎉`,
+      `Oke banget! Informasinya tentang ${newsTitle} memang menarik! 😄`,
+      `Apa kabar? Sudah dengar berita tentang ${newsTitle}? 😜👊`,
+      `Bener, bener, bener! Kamu luar biasa! 🚀 Berita terkini: ${newsTitle}`
+    ];
 
-    // Memeriksa apakah jawaban mengandung kata positif
-    for (const posKeyword of gantengKeywords) {
-      if (userAnswer.includes(posKeyword)) {
-        return true; // Jawaban positif, valid
-      }
-    }
+    const randomIndex = Math.floor(Math.random() * randomMessages.length);
+    const randomMessage = randomMessages[randomIndex];
 
-    return false; // Jawaban tidak mengandung kata kunci yang valid
+    alert(randomMessage);
   }
-    </script>
+
+  window.onload = fetchNews;
+  </script>
 </body>
-	</html>
+</html>
