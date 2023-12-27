@@ -127,10 +127,16 @@
         
         .haha {
           color: skyblue;
+          text-decoration: none;
         }
         
          ol li, ul li {
           color: white;
+        }
+        
+        .txt-name {
+          color: #B0C4DE;
+          text-decoration: none;
         }
         
         #audio {
@@ -142,7 +148,7 @@
     <div class="brand">
               <div class="firstname">SEDULUR KONCO LAWAS (SKL)</div>
               <audio id="backgroundMusic" autoplay loop>
-  <source src="https://drive.google.com/uc?id=1SliR6WFnpNfFhADlPZVpR7Lf9X-Zxud6" type="audio/mp3">
+  <source src="music" type="audio/mp3">
   Your browser does not support the audio tag.
 </audio>
               <div class="lastname"></div>
@@ -157,6 +163,18 @@
           <h2>/ Info Grup</h2>
           </div>
 <p align="right" class="txt">Sedulur Konco Lawas, Perkenalkan ini adalah grup yang dibuat oleh <span style="color: red;">Z1on.mp4</span> dia membuat grup ini pada tanggal 9 Desember 2023. Ada 7 admin yaitu <span style="color: red;"> Arya,Ardan,Ardi,Faiz,Haekal,Ikram,Noe</span> Mereka semua jomox <span style="color: green;">Kecuali Ardan</span> Awokawok sekian terimagaji.</p>
+<div class="p1">
+  <h2>/ Admin</h2>
+  <ul type="square">
+    <li><a href="#" class="txt-name">arya, chat disini</a></li>
+    <li><a href="#" class="txt-name">ardan, chat disini</a></li></li>
+    <li><a href="#" class="txt-name">faiz, chat disini</a></li></li>
+    <li><a href="#" class="txt-name">haekal, chat disini</a></li></li>
+    <li><a href="#" class="txt-name">ardi, chat disini</a></li></li>
+    <li><a href="#" class="txt-name">ikram, chat disini</a></li></li>
+        <li><a href="#" class="txt-name">noe, chat disini</a></li></li>
+  </ul>
+</div>
 <div class="p1">
   <h2>/ Rules Grup</h2>
   <ul type="circle">
@@ -222,42 +240,30 @@
     }
   });
     
-    async function fetchNews() {
-    try {
-      const apiKey = '38292e34b0a649c1aed40e2f24733439';
-      const apiUrl = `https://newsapi.org/v2/top-headlines?country=id&apiKey=${apiKey}`;
-
-      const response = await fetch(apiUrl);
-      const data = await response.json();
-
-      // Ambil judul berita pertama
-      const newsTitle = data.articles[0].title;
-
-      // Tampilkan pesan dengan judul berita
-      showMessageBasedOnNews(newsTitle);
-    } catch (error) {
-      console.error('Error fetching news:', error);
-    }
-  }
-
-  function showMessageBasedOnNews(newsTitle) {
-    const randomMessages = [
-      `Berita viral hari ini: ${newsTitle}! 😎`,
-      `Wah, kamu tahu nggak? ${newsTitle} itu lagi ngehits! 👍`,
-      `Bener banget! ${newsTitle} emang sedang jadi perbincangan hangat! 🌟`,
-      `Selamat! Kamu sudah tahu tentang ${newsTitle}! 🎉`,
-      `Oke banget! Informasinya tentang ${newsTitle} memang menarik! 😄`,
-      `Apa kabar? Sudah dengar berita tentang ${newsTitle}? 😜👊`,
-      `Bener, bener, bener! Kamu luar biasa! 🚀 Berita terkini: ${newsTitle}`
+function showRandomAnnouncement() {
+    const randomAnnouncements = [
+        'woi lu nolep anjg😹',
+        'admin (faiz) tukang nolep ges',
+        'admin (arya) dia nnton bok*p cuy awokawok',
+        'admin (ikram) nonton doujin bjir😯',
+        'admin (ardi) dia tukang dipes ges jago bet',
+        'admin (haekal) dia tukang nonton hentai rek harus di aduin ke emaknya inimah',
+        'admin (ardan) dia sepuh rek yang bikin ini webngset yahaha hayuuk slebewww',
+        '#FreePalestine',
+        'israel kontolll',
+        'lu dukung israel? mati lu kontol!',
+        'usir rohingya setuju ga? jelas setujuu lah😜👊',
+        'ardan kece wirr'
+        // Tambahkan pengumuman lainnya sesuai kebutuhan
     ];
 
-    const randomIndex = Math.floor(Math.random() * randomMessages.length);
-    const randomMessage = randomMessages[randomIndex];
+    const randomIndex = Math.floor(Math.random() * randomAnnouncements.length);
+    const randomAnnouncement = randomAnnouncements[randomIndex];
 
-    alert(randomMessage);
-  }
+    alert(randomAnnouncement);
+}
 
-  window.onload = fetchNews;
+window.onload = showRandomAnnouncement;
   </script>
 </body>
 </html>
