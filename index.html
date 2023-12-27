@@ -51,6 +51,7 @@
           font-family: Comic Sans MS;
           font-weight: bold;
           font-size: 15px;
+          text-decoration: none;
         }
         
         .link a {
@@ -117,7 +118,6 @@
           text-decoration: none;
           color: tomato;
           font-family: Trebuchet MS;
-          text-decoration: underline;
         }
         
         .hujat {
@@ -132,11 +132,6 @@
         
          ol li, ul li {
           color: white;
-        }
-        
-        .txt-name {
-          color: #B0C4DE;
-          text-decoration: none;
         }
         
         #audio {
@@ -166,14 +161,15 @@
 <div class="p1">
   <h2>/ Admin</h2>
   <ul id="adminList" style="list-style-type: square;">
-    <li><a href="https://wa.me/+6281937377814?text=woi+arya+i+love+you" class="txt-name">arya, chat disini</a></li>
-    <li><a href="https://wa.me/+6283182725011?text=halo+ardan+ganteng" class="txt-name">ardan, chat disini</a></li>
-    <li><a href="https://wa.me/+6283182297999?text=halo+faiz+tukang+nolep" class="txt-name">faiz, chat disini</a></li>
-    <li><a href="https://wa.me/+6285974022552?text=oi+haekal+cabul" class="txt-name">haekal, chat disini</a></li>
-    <li><a href="https://wa.me/+6285255692769?text=oi+ardi+sepuh+dipes+dan+sepuh+bo*kp" class="txt-name">ardi, chat disini</a></li>
-    <li><a href="https://wa.me/+6282287188031?text=oi+ikram+lu+sepuh+doujin+kan+minta+dong" class="txt-name">ikram, chat disini</a></li>
-    <li><a href="https://wa.me/+6285649093224?text=oi+noe+pedo+parah+wak" class="txt-name">noe, chat disini</a></li>
+    <li><a href="https://wa.me/+6281937377814?text=woi+arya+i+love+you">arya, chat disini</a></li>
+    <li><a href="https://wa.me/+6283182725011?text=halo+ardan+ganteng">ardan, chat disini</a></li>
+    <li><a href="https://wa.me/+6283182297999?text=halo+faiz+tukang+nolep">faiz, chat disini</a></li>
+    <li><a href="https://wa.me/+6285974022552?text=oi+haekal+cabul">haekal, chat disini</a></li>
+    <li><a href="https://wa.me/+6285255692769?text=oi+ardi+sepuh+dipes+dan+sepuh+bo*kp">ardi, chat disini</a></li>
+    <li><a href="https://wa.me/+6282287188031?text=oi+ikram+lu+sepuh+doujin+kan+minta+dong">ikram, chat disini</a></li>
+    <li><a href="https://wa.me/+6285649093224?text=oi+noe+pedo+parah+wak">noe, chat disini</a></li>
   </ul>
+</div>
 <div class="p1">
   <h2>/ Rules Grup</h2>
   <ul type="circle">
@@ -202,7 +198,9 @@
        </div>
           <div class="p1">
           <h2>/ Link Grup</h2>
-          <a href="https://chat.whatsapp.com/FlAEg3PdoXOB02MT4NbgLG"># Klik Disini Rek</a>
+          <a href="https://chat.whatsapp.com/FlAEg3PdoXOB02MT4NbgLG"># sedulur konco lawas</a><br>
+          <a href="https://chat.whatsapp.com/BEAcTFoQX8WD3ksbNqEm4v"># free talk</a><br>
+          <a href="https://chat.whatsapp.com/FPf256CTdSi2S45Cm5r43J"># &#9748; teenage chat || &#127754;</a>
           </div>
           <br>
           <p class="kerjabagus">&#9760; Sedulur Konco Lawas &#9760;<br>
@@ -272,17 +270,34 @@ window.onload = showRandomAnnouncement;
 
 document.addEventListener('DOMContentLoaded', function () {
     const adminList = document.getElementById('adminList');
-    const listItems = Array.from(adminList.children);
+    const adminData = [
+      { name: 'arya', link: 'https://wa.me/+6281937377814?text=woi+arya+i+love+you' },
+      { name: 'ardan', link: 'https://wa.me/+6283182725011?text=halo+ardan+ganteng' },
+      { name: 'faiz', link: 'https://wa.me/+6283182297999?text=halo+faiz+tukang+nolep' },
+      { name: 'haekal', link: 'https://wa.me/+6285974022552?text=oi+haekal+cabul' },
+      { name: 'ardi', link: 'https://wa.me/+6285255692769?text=oi+ardi+sepuh+dipes+dan+sepuh+bo*kp' },
+      { name: 'ikram', link: 'https://wa.me/+6282287188031?text=oi+ikram+lu+sepuh+doujin+kan+minta+dong' },
+      { name: 'noe', link: 'https://wa.me/+6285649093224?text=oi+noe+pedo+parah+wak' }
+    ];
 
-    listItems.sort((a, b) => {
-      const nameA = a.textContent.toLowerCase();
-      const nameB = b.textContent.toLowerCase();
-      return nameA.localeCompare(nameB);
+    // Urutkan berdasarkan nama
+    adminData.sort((a, b) => a.name.localeCompare(b.name));
+
+    // Hapus elemen anak lama
+    while (adminList.firstChild) {
+      adminList.removeChild(adminList.firstChild);
+    }
+
+    // Tambahkan elemen anak baru sesuai urutan
+    adminData.forEach(admin => {
+      const listItem = document.createElement('li');
+      const anchor = document.createElement('a');
+      anchor.href = admin.link;
+      anchor.textContent = `${admin.name}, chat disini`;
+      listItem.appendChild(anchor);
+      adminList.appendChild(listItem);
     });
-
-    listItems.forEach(item => adminList.appendChild(item));
   });
   </script>
 </body>
-																	   </html>
-	
+</html>
