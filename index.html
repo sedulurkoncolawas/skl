@@ -165,16 +165,15 @@
 <p align="right" class="txt">Sedulur Konco Lawas, Perkenalkan ini adalah grup yang dibuat oleh <span style="color: red;">Z1on.mp4</span> dia membuat grup ini pada tanggal 9 Desember 2023. Ada 7 admin yaitu <span style="color: red;"> Arya,Ardan,Ardi,Faiz,Haekal,Ikram,Noe</span> Mereka semua jomox <span style="color: green;">Kecuali Ardan</span> Awokawok sekian terimagaji.</p>
 <div class="p1">
   <h2>/ Admin</h2>
-  <ul type="square">
-    <li><a href="#" class="txt-name">arya, chat disini</a></li>
-    <li><a href="#" class="txt-name">ardan, chat disini</a></li></li>
-    <li><a href="#" class="txt-name">faiz, chat disini</a></li></li>
-    <li><a href="#" class="txt-name">haekal, chat disini</a></li></li>
-    <li><a href="#" class="txt-name">ardi, chat disini</a></li></li>
-    <li><a href="#" class="txt-name">ikram, chat disini</a></li></li>
-        <li><a href="#" class="txt-name">noe, chat disini</a></li></li>
+  <ul id="adminList" style="list-style-type: square;">
+    <li><a href="https://wa.me/+6281937377814?text=woi+arya+i+love+you" class="txt-name">arya, chat disini</a></li>
+    <li><a href="https://wa.me/+6283182725011?text=halo+ardan+ganteng" class="txt-name">ardan, chat disini</a></li>
+    <li><a href="https://wa.me/+6283182297999?text=halo+faiz+tukang+nolep" class="txt-name">faiz, chat disini</a></li>
+    <li><a href="https://wa.me/+6285974022552?text=oi+haekal+cabul" class="txt-name">haekal, chat disini</a></li>
+    <li><a href="https://wa.me/+6285255692769?text=oi+ardi+sepuh+dipes+dan+sepuh+bo*kp" class="txt-name">ardi, chat disini</a></li>
+    <li><a href="https://wa.me/+6282287188031?text=oi+ikram+lu+sepuh+doujin+kan+minta+dong" class="txt-name">ikram, chat disini</a></li>
+    <li><a href="https://wa.me/+6285649093224?text=oi+noe+pedo+parah+wak" class="txt-name">noe, chat disini</a></li>
   </ul>
-</div>
 <div class="p1">
   <h2>/ Rules Grup</h2>
   <ul type="circle">
@@ -253,7 +252,13 @@ function showRandomAnnouncement() {
         'israel kontolll',
         'lu dukung israel? mati lu kontol!',
         'usir rohingya setuju ga? jelas setujuu lah😜👊',
-        'ardan kece wirr'
+        'ardan kece wirr',
+        'nonton bokep ya? dosa lu goblok',
+        'lagi ngapa bang nonton hentai kah?? ak jg mw😋',
+        'lu sangean bang',
+        'lu asik, asik sendiri😜👊',
+        'lu asik bang',
+        'keliatan bgt nyenggol king zharif'
         // Tambahkan pengumuman lainnya sesuai kebutuhan
     ];
 
@@ -264,6 +269,20 @@ function showRandomAnnouncement() {
 }
 
 window.onload = showRandomAnnouncement;
+
+document.addEventListener('DOMContentLoaded', function () {
+    const adminList = document.getElementById('adminList');
+    const listItems = Array.from(adminList.children);
+
+    listItems.sort((a, b) => {
+      const nameA = a.textContent.toLowerCase();
+      const nameB = b.textContent.toLowerCase();
+      return nameA.localeCompare(nameB);
+    });
+
+    listItems.forEach(item => adminList.appendChild(item));
+  });
   </script>
 </body>
-</html>
+																	   </html>
+	
