@@ -1,99 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="https://drive.google.com/uc?id=1WHpQjYH75n9PyAWf1O5MS7qE5_gOsP3i">
-  <title>SKL Official</title>
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Rowdies&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
+						<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Andika:wght@700&family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+						<link rel="shortcut icon" href="https://drive.google.com/uc?id=1WHpQjYH75n9PyAWf1O5MS7qE5_gOsP3i">
+    <title>SKL Official</title>
+    <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #222;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      background-color: #000000;
     }
-
-            img {
+    .brand {
+            font-size: 2,9em;
+            padding: 12px;
+            text-transform: capitalize;
+        }
+        
+        .firstname {
+            color: white;
+            font-weight: 700;
+            font-family: 'Gothic', sans-serif;
+        }
+        
+        .lastname {
+            color: rgb(255,0,0);
+            font-weight: 555;
+            padding-left: 4px;
+            font-family: 'Gothic', sans-serif;
+        }
+        
+        .yoi {
+          color: #ff0000;
+          display: block;
+          margin: auto;
+          font-weight: bold;
+          font-family: 'Andika', sans-serif;
+        }
+        
+        .link {
+          text-align: center;
+          font-family: Comic Sans MS;
+          font-weight: bold;
+          font-size: 15px;
+          text-decoration: none;
+        }
+        
+        .link a {
+          color: skyblue;
+          text-decoration: none;
+        }
+        
+        .link a:hover {
+          color: rgb(0,255,0);
+          text-align: center;
+          transition: all .3s ease-in-out;
+        }
+        
+        .kerjabagus {
+          text-align: center;
+          color: hsl(0,0%,45.1%);
+          font-family: Sans-Serif;
+          color: #787878;
+        }
+        
+        .col {
+          text-align: center;
+          color: pink;
+          font-family: 'Gothic', sans-serif;
+          text-transform: capitalize;
+        }
+        
+        .logo {
           width: 80px;
           height: 80px;
+          display: block;
+          margin: auto;
           border: 2px solid red;
           border-radius: 50px;
         }
-
-    #countdown {
-      font-size: 2em;
-    }
-
-    #welcome-message {
-      font-size: 2em;
-      color: #4CAF50;
-      margin-top: 20px;
-    }
-
-    #pre-welcome-message {
-      font-size: 1.5em;
-      color: #3498db;
-      margin-top: 20px;
-    }
-
-   p {
-     font-style: italic;
-   }
-
-    footer {
-      text-align: center;
-      font-size: 0.8em;
-      color: #888;
-      margin-top: 20px;
-    }
-  </style>
+        
+         footer {
+        color: #787878;
+        text-align: center;
+        font-size: 13px;
+        font-family: Sans-Serif;
+      }
+        
+        .recommended {
+          color: white;
+          text-align: center;
+          font-weight: bold;
+          font-family: Sans-Serif;
+        }
+        
+        .p1 {
+          color: #ff0000;
+          font-weight: bold;
+          font-family: 'Andika', sans-serif;
+        }
+        
+        .txt {
+          color: white;
+          font-style: italic;
+          font-family: Monospace;
+        }
+        
+        a {
+          text-decoration: none;
+          color: tomato;
+          font-family: Trebuchet MS;
+        }
+        
+        .hujat {
+          color: crimson;
+          font-family: Trebuchet MS;
+        }
+        
+        .haha {
+          color: skyblue;
+          text-decoration: none;
+        }
+        
+         ol li, ul li {
+          color: white;
+        }
+        
+        summary {
+          color: tomato;
+          font-size: 20px;
+          position: relative;
+          left: 5px;
+          text-decoration: underline;
+        }
+        
+      .apalah {
+  border: 1px solid red;
+      }
+        
+        .sirkel1 {
+          border: 1px solid red;
+          position: relative;
+          left: 1px;
+          right: 2px;
+        }
+        
+       /* .name {
+          text-align: center;
+        }*/
+        
+        section {
+          position: relative;
+          left: 2px;
+        }
+        
+        #audio {
+  display: none;
+}
+    </style>
 </head>
 <body>
+    <div class="brand">
+              <div class="firstname">SEDULUR KONCO LAWAS (SKL)</div>
+              <audio id="backgroundMusic" autoplay loop>
+  <source src="music" type="audio/mp3">
+  Your browser does not support the audio tag.
+</audio>
+              <div class="lastname"></div>
+          <hr color="red">
+          <!--WAIMMUNE-->
+          <br>
           <img class="logo" src="https://drive.google.com/uc?id=1WHpQjYH75n9PyAWf1O5MS7qE5_gOsP3i"/>
-<div id="countdown"></div>
-<div id="pre-welcome-message"></div>
-<div id="welcome-message"></div>
-<p>"<span style="color: red;">2023</span> berakhir Terimakasih untuk segala momennya, Terimakasih untuk semuanya"</p>
- <audio controls>
-    <source src="https://drive.google.com/uc?id=1YWfxE_bHaszVOBqbjbc-G5VWDjpuN-Pa" type="audio/mpeg">
-    Browsermu tidak mendukung tag audio, upgrade donk!
- </audio>
-<footer>&copy; SKL Official</footer>
-<script>
-  var currentDate = new Date().getFullYear();
-  var countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
+          <div class="col">
+           <h2> &#x30C3; Sedulur Konco Lawas &#x30C3;</h2>
+          </div>
+          <div class="p1">
+          <h2>/ Info Grup</h2>
+          </div>
+<p align="right" class="txt">Sedulur Konco Lawas, Perkenalkan ini adalah grup yang dibuat oleh <span style="color: red;">Z1on.mp4</span> dia membuat grup ini pada tanggal 9 Desember 2023. Ada 7 admin yaitu <span style="color: red;"> Arya,Ardan,Ardi,Faiz,Haekal,Ikram,Noe</span> Mereka semua jomox <span style="color: green;">Kecuali Ardan</span> Awokawok sekian terimagaji.</p>
+<div class="p1">
+  <article>
+    <details>
+        <summary>Lihat Admin</summary>
+        <ul class="apalah" type="square">
+            <li><a href="https://wa.me/+6281937377814?text=halo+arya+i+love+you">arya, chat disini</a> - yang attacker </li>
+            <li><a href="https://wa.me/+6283182725011?text=halo+ardan+ganteng">ardan, chat disini</a> - yang kroco</li>
+            <li><a href="https://wa.me/+6283182297999?text=halo+faiz+tukang+nolep">faiz, chat disini</a> - yang nolep</li>
+            <li><a href="https://wa.me/+6285974022552?text=oi+haekal+cabul">haekal, chat disini</a> - yang hentai</li>
+            <li><a href="https://wa.me/+6285255692769?text=oi+ardi+sepuh+dipes+dan+sepuh+bo*kp">ardi, chat disini</a> - yang deface</li>
+            <li><a href="https://wa.me/+6282287188031?text=oi+ikram+lu+sepuh+doujin+kan+minta+dong">ikram, chat disini</a> - yang npc</li>
+            <li><a href="https://wa.me/+6285649093224?text=oi+noe+pedo+parah+wak">noe, chat disini</a> - yang bucin</li>
+        </ul>
+    </details>
+</article>
+</div>
+<div class="p1">
+  <h2>/ Rules Grup</h2>
+  <ul type="circle">
+    <li>chat bebas</li>
+    <li>toxic sewajarnya aja rek</li>
+    <li>no porn/hentai <a class="haha" href="https://www.suara.com/lifestyle/2023/07/03/194500/hukum-menonton-film-porno-dalam-pandangan-islam-buya-yahya-bagikan-beberapa-bahayanya">dosa wak</a></li>
+    <li>no virtex/bug ampas kids&#128686;
+    <li>no baper</li>
+    <li>asikin aja wir</li>
+  </ul>
+</div>
+       <div class="p1">
+         <h2>/ List Hewan Idiot</h2>
+         <ol type="1">
+           <li>nino</li>
+           <li>vanile <a class="hujat" href="https://wa.me/+6287766566010?text=woi+kontol+anjg+lu+dajjal+sumpah+vaniler+cowo+lu+kek+peler+alay+tolol&#128569;">Hujat Orangnya Disini!</a></li>
+           <li>fanya</li>
+           <li>sean</li>
+           <article class="sirkel1">
+             <!--<section>satu sirkel kroco&#129299;&#129299;&#129299;</section>-->
+           <li class="name">dinda <a class="hujat" href="wa.me/+6285894847418?text=woi+peler+lu+kroco+monyet+negro">Hujat Orangnya Disini!</a></li>
+           <li class="name">kekey <a class="hujat" href="https://wa.me/+6282324079817?text=lu+peler+sama+kaya+dinda+nigga+kocak+dek">Hujat Orangnya Disini!</a></li>
+           <li class="name">nia <a class="hujat" href="https://wa.me/+6281574682895?text=kroco+lu+dek+nia+kontol+dajjal">Hujat Orangnya Disini!</a></li>
+           <li class="name">unknown <a class="hujat" href="https://wa.me/+6281574682895?text=lu+nigga+apa+negro?">Hujat Orangnya Disini!</a></li>
+           </article>
+                      <li>gildan <a class="hujat" href="https://wa.me/+6285878140741?text=oi+kroco+gildan+idiot😂">Hujat Orangnya Disini!</a></li>
+                                 <li>syaira <a class="hujat" href="https://wa.me/+6282155326100?text=woi+peler+kuda+gamon+sama+gildan+lu+gw+bilangin+grimz+mampus+lu+kroco😂">Hujat Orangnya Disini!</a></li>
+                                 <li>req? <a class="hujat" href="https://wa.me/+6283182725011?text=bang+gw+mau+req+binatang+baru+lagi">Chat Disini</a></li>
+                                 <li>req? <a class="hujat" href="https://wa.me/+6283182725011?text=bang+gw+mau+req+binatang+baru+lagi">Chat Disini</a></li>
+                                 <li>req? <a class="hujat" href="https://wa.me/+6283182725011?text=bang+gw+mau+req+binatang+baru+lagi">Chat Disini</a></li>
+                                 <li>req? <a class="hujat" href="https://wa.me/+6283182725011?text=bang+gw+mau+req+binatang+baru+lagi">Chat Disini</a></li>
+         </ul>
+       </div>
+          <div class="p1">
+          <h2>/ Link Grup</h2>
+          <a href="https://chat.whatsapp.com/FlAEg3PdoXOB02MT4NbgLG"># sedulur konco lawas</a><br>
+          <a href="https://chat.whatsapp.com/BEAcTFoQX8WD3ksbNqEm4v"># free talk</a><br>
+          <a href="https://chat.whatsapp.com/FPf256CTdSi2S45Cm5r43J"># &#9748; teenage chat || &#127754;</a>
+          </div>
+          <br>
+          <p class="kerjabagus">&#9760; Sedulur Konco Lawas &#9760;<br>
+ arya - ardan - faiz - ardi - haekal - ikram - Noe</p>
+         <br>
+        <footer>&copy; 2023 - <span id="currentYear"></span></footer>
+        <script>
+    document.getElementById('currentYear').innerHTML = new Date().getFullYear();
+    
+    document.addEventListener("DOMContentLoaded", function () {
+    var backgroundMusic = document.getElementById("backgroundMusic");
 
-  var x = setInterval(function() {
-    var now = new Date().getTime();
-    var distance = countDownDate - now;
+    // Mengecek apakah browser mendukung autoplay
+    var isAutoplaySupported = backgroundMusic.autoplay;
 
-    if (currentDate < 2023) {
-      document.getElementById("pre-welcome-message").innerHTML = "Bersiaplah untuk tahun 2023 yang menakjubkan😁";
-    } else if (distance > 0) {
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("countdown").innerHTML = days + "Hari " + hours + "Jam "
-        + minutes + "Menit " + seconds + "Detik ";
-    } else {
-      clearInterval(x);
-      document.getElementById("countdown").style.display = "none";
-      document.getElementById("pre-welcome-message").style.display = "none";
-      document.getElementById("welcome-message").innerHTML = "Welcome To 2024🎉";
-      document.getElementsByTagName("body")[0].style.flexDirection = "column-reverse"; // Reverse flex direction for the footer
-      document.getElementsByTagName("body")[0].innerHTML += '<footer>&copy; SKL Official | Terimakasih 2023</footer>';
+    // Jika autoplay didukung, maka memutar musik
+    if (isAutoplaySupported) {
+      backgroundMusic.play();
     }
-  }, 1000);
-</script>
 
+    // Fungsi untuk memulai pemutaran musik (akan dipanggil jika autoplay tidak didukung)
+    function startMusic() {
+      backgroundMusic.play();
+    }
+
+    // Fungsi untuk memberhentikan pemutaran musik
+    function stopMusic() {
+      backgroundMusic.pause();
+    }
+
+    // Memulai pemutaran musik jika autoplay tidak didukung
+    if (!isAutoplaySupported) {
+      startMusic();
+    }
+  });
+    
+function showRandomAnnouncement() {
+    const randomAnnouncements = [
+        'woi lu nolep anjg😹',
+        'admin (faiz) tukang nolep ges',
+        'admin (arya) dia nnton bok*p cuy awokawok',
+        'admin (ikram) nonton doujin bjir😯',
+        'admin (ardi) dia tukang dipes ges jago bet',
+        'admin (haekal) dia tukang nonton hentai rek harus di aduin ke emaknya inimah',
+        'admin (ardan) dia sepuh rek yang bikin ini webngset yahaha hayuuk slebewww',
+        '#FreePalestine',
+        'israel kontolll',
+        'lu dukung israel? mati lu kontol!',
+        'usir rohingya setuju ga? jelas setujuu lah😜👊',
+        'ardan kece wirr',
+        'nonton bokep ya? dosa lu goblok',
+        'lagi ngapa bang nonton hentai kah?? ak jg mw😋',
+        'lu sangean bang',
+        'lu asik, asik sendiri😜👊',
+        'lu asik bang',
+        'keliatan bgt nyenggol king zharif'
+        // Tambahkan pengumuman lainnya sesuai kebutuhan
+    ];
+
+    const randomIndex = Math.floor(Math.random() * randomAnnouncements.length);
+    const randomAnnouncement = randomAnnouncements[randomIndex];
+
+    alert(randomAnnouncement);
+}
+
+window.onload = showRandomAnnouncement;
+
+
+  </script>
 </body>
 </html>
